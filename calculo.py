@@ -36,18 +36,3 @@ elif opcion == "Volumen (V)":
 elif opcion == "Temperatura (T)":
     presion = st.number_input("Presión (atm)", min_value=0.001, format="%.3f")
     volumen = st.number_input("Volumen (L)", min_value=0.001, format="%.3f")
-    moles = st.number_input("Número de moles (mol)", min_value=0.001, format="%.3f")
-    if st.button("Calcular Temperatura"):
-        temperatura = (presion * volumen) / (moles * R)
-        st.success(f"La temperatura es: **{temperatura:.2f} K**")
-
-elif opcion == "Número de moles (n)":
-    presion = st.number_input("Presión (atm)", min_value=0.001, format="%.3f")
-    volumen = st.number_input("Volumen (L)", min_value=0.001, format="%.3f")
-    temperatura = st.number_input("Temperatura (K)", min_value=0.001, format="%.2f")
-    if st.button("Calcular Moles"):
-        moles = (presion * volumen) / (R * temperatura)
-        st.success(f"El número de moles es: **{moles:.3f} mol**")
-
-st.markdown("---")
-st.caption("Desarrollado con
